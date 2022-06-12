@@ -19,13 +19,13 @@ In your ROS2 workspace, clone the repository:
 
 .. tabs::
 
-   .. tab:: Foxy / Galactic
+   .. group-tab:: Foxy / Galactic
 
       .. code-block:: console
 
          git clone https://github.com/ros-sports/gc_spl.git src/gc_spl --branch=galactic
 
-   .. tab:: Humble / Rolling
+   .. group-tab:: Humble / Rolling
 
       .. code-block:: console
 
