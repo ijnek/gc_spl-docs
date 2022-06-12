@@ -15,5 +15,6 @@ The project is hosted on `Github`_ by ROS Sports. **Issues and Pull Requests are
 
    installation
    tutorial
+   versions
 
 .. _Github: https://github.com/ros-sports/gc_spl

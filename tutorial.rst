@@ -138,7 +138,7 @@ Use the following command to publish a msg to the topic:
 
    ros2 topic pub --once /gc/return_data rcgcrd_spl_4/msg/RCGCRD "{player_num: 2, team_num: 18}"
 
-You can see that the GameController is reporting a green light for team 18's player 2, indicating a message has been received recently.
+You can see that the GameController is reporting a green light for team rUNSWift's player 2, indicating a message has been received recently.
 
 .. image:: images/GameController-with-active-player.png
    :align: center
