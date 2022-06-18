@@ -8,8 +8,8 @@ The structure of the UDP packets used to communicate with the GameController are
 GameController SPL (GCSPL)
 **************************
 
-``gc_spl_master`` is a package that works with the master branch of `GameController`_ and is useful when developing against the most recent GameController.
-**This package may break API/ABI compatibility at any time** in any of the distros, and is not for use in upcoming competitions.
+``gc_spl_master`` is a package in the dev branch, that works with the master branch of `GameController`_ and is useful when developing against the most recent GameController.
+**This package is not released** in any of the distros, and is not for use in upcoming competitions.
 
 For each competition, a package named ``gc_spl_{COMPETITION}`` will be split off from ``gc_spl_master`` and be released for all active distros. (eg. ``gc_spl_2022`` for the main RoboCup 2022 Competition)
 Packages for regional competitions such as the German Open or RoboCup Asia Pacific, will be named as ``gc_spl_go2022`` and ``gc_spl_ap2022``.
