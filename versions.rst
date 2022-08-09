@@ -43,15 +43,15 @@ The table below lists the current availability of packages under different ROS d
      - Galactic
      - Humble
      - Rolling
-   * - gc_spl_master
-     - Yes
-     - Yes
-     - Yes
-     - Yes
    * - gc_spl_2022
      - Yes
      - Yes
      - Yes
      - Yes
+   * - gc_spl_master
+     - No
+     - No
+     - No
+     - No
 
 .. _GameController: https://github.com/RoboCup-SPL/GameController
