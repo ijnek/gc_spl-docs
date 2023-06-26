@@ -34,7 +34,7 @@ Packages will be released for all active ROS distributions at the time of compet
 The table below lists the current availability of packages under different ROS distros and competitions.
 
 .. list-table:: Package availability
-   :widths: 25 25 25 25 25
+   :widths: 1 1 1 1 1 1
    :header-rows: 1
    :stub-columns: 1
 
@@ -42,13 +42,22 @@ The table below lists the current availability of packages under different ROS d
      - Foxy
      - Galactic
      - Humble
+     - Iron
      - Rolling
    * - gc_spl_2022
      - Yes
      - Yes
      - Yes
+     - No
+     - No
+   * - gc_spl_2023
+     - No
+     - No
+     - Yes
+     - Yes
      - Yes
    * - gc_spl_master
+     - No
      - No
      - No
      - No
