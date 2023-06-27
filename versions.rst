@@ -48,8 +48,8 @@ The table below lists the current availability of packages under different ROS d
      - Yes
      - Yes
      - Yes
-     - No
-     - No
+     - Deprecated
+     - Deprecated
    * - gc_spl_2023
      - No
      - No
