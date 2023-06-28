@@ -1,10 +1,6 @@
 Installation
 ############
 
-.. warning::
-
-   This package targets **ROS2 Foxy onwards**. It won't compile on all ROS1 and older ROS2 distros.
-
 To install the packages, do one of the following:
 
 * a `Binary Installation`_
@@ -20,11 +16,7 @@ Source your ROS installation, then run:
 .. code-block:: console
 
   sudo apt update
-  sudo apt install ros-${ROS_DISTRO}-gc-spl-2022
-
-Replace ``2022`` with the Game Controller's year.
-Currently the only available package is ``gc_spl_2022``.
-In the future, more packages will be added to all available distros to cover future competitions.
+  sudo apt install ros-${ROS_DISTRO}-gc-spl
 
 If this method does not work for your platform, perform the `Source Installation`_ instead.
 

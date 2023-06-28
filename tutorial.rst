@@ -2,21 +2,15 @@ Tutorial
 ########
 
 First, you should run the gc_spl node that handles communication with the SPL GameController.
-From the tabs below, select which `GameController`_ branch/tag you are using:
+You must provide the versions of the GameController data and return data that you want to use as parameters.
 
-.. tabs::
+.. code-block:: sh
 
-   .. group-tab:: 2022
+   ros2 run gc_spl gc_spl --ros-args -p rcgcd_version:=15 -p rcgcrd_version:=4
 
-      .. code-block:: sh
+.. note::
 
-         ros2 run gc_spl_2022 gc_spl
-
-   .. group-tab:: master
-
-      .. code-block:: sh
-
-         ros2 run gc_spl_master gc_spl
+   Change the rcgcd version and rcgcrd version to match your GameController
 
 List the topics:
 
@@ -26,19 +20,10 @@ List the topics:
 
 You should see the following amongst the listed topics:
 
-.. tabs::
+.. code-block:: sh
 
-   .. group-tab:: 2022
-
-      .. code-block:: sh
-
-         /gc/data [rcgcd_spl_14/msg/RCGCD]
-         /gc/return_data [rcgcrd_spl_4/msg/RCGCRD]
-
-   .. group-tab:: master
-
-         /gc/data [rcgcd_spl_14/msg/RCGCD]
-         /gc/return_data [rcgcrd_spl_4/msg/RCGCRD]
+   /gc/data [gc_spl_interfaces/msg/RCGCD15]
+   /gc/return_data [gc_spl_interfaces/msg/RCGCRD4]
 
 Echoing data from GameController
 ================================
@@ -63,21 +48,23 @@ You should see the data from the GameController being echoed similar to the foll
 
 .. code-block:: sh
 
-   ---
-   packet_number: 11
+   packet_number: 202
    players_per_team: 6
    competition_phase: 0
    competition_type: 0
    game_phase: 0
-   state: 0
+   state: 2
    set_play: 0
    first_half: 1
-   kicking_team: 18
+   kicking_team: 5
    secs_remaining: 600
    secondary_time: 0
    teams:
-   - team_number: 18
-   team_colour: 2
+   - team_number: 5
+   field_player_colour: 3
+   goalkeeper_colour: 3
+   goalkeeper: 1
+   team_colour: 0
    score: 0
    penalty_shot: 0
    single_shots: 0
@@ -85,20 +72,12 @@ You should see the data from the GameController being echoed similar to the foll
    players:
    - penalty: 0
       secs_till_unpenalised: 0
-   - penalty: 0
-      secs_till_unpenalised: 0
-   - penalty: 0
-      secs_till_unpenalised: 0
-   - penalty: 0
-      secs_till_unpenalised: 0
-   - penalty: 0
-      secs_till_unpenalised: 0
-   - penalty: 14
-      secs_till_unpenalised: 0
-   - penalty: 14
-      secs_till_unpenalised: 0
+   .......
    - team_number: 0
-   team_colour: 1
+   field_player_colour: 0
+   goalkeeper_colour: 0
+   goalkeeper: 1
+   team_colour: 0
    score: 0
    penalty_shot: 0
    single_shots: 0
@@ -106,19 +85,7 @@ You should see the data from the GameController being echoed similar to the foll
    players:
    - penalty: 0
       secs_till_unpenalised: 0
-   - penalty: 0
-      secs_till_unpenalised: 0
-   - penalty: 0
-      secs_till_unpenalised: 0
-   - penalty: 0
-      secs_till_unpenalised: 0
-   - penalty: 0
-      secs_till_unpenalised: 0
-   - penalty: 14
-      secs_till_unpenalised: 0
-   - penalty: 14
-      secs_till_unpenalised: 0
-   ---
+   .......
 
 Sending data to GameController
 ==============================
@@ -136,7 +103,7 @@ Use the following command to publish a msg to the topic:
 
 .. code-block:: bash
 
-   ros2 topic pub --once /gc/return_data rcgcrd_spl_4/msg/RCGCRD "{player_num: 2, team_num: 18}"
+   ros2 topic pub --once /gc/return_data gc_spl_interfaces/msg/RCGCRD4 "{player_num: 2, team_num: 18}"
 
 You can see that the GameController is reporting a green light for team rUNSWift's player 2, indicating a message has been received recently.
 
@@ -144,5 +111,3 @@ You can see that the GameController is reporting a green light for team rUNSWift
    :align: center
 
 .. _GameController: https://github.com/RoboCup-SPL/GameController
-
-
