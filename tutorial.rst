@@ -6,7 +6,7 @@ You must provide the versions of the GameController data and return data that yo
 
 .. code-block:: sh
 
-   ros2 run gc_spl gc_spl --ros-args -p rcgcd_version:=15 -p rcgcrd_version:=4
+   ros2 run gc_spl gc_spl --ros-args -p rcgcd_version:=16 -p rcgcrd_version:=4
 
 .. note::
 
@@ -103,7 +103,7 @@ Use the following command to publish a msg to the topic:
 
 .. code-block:: bash
 
-   ros2 topic pub --once /gc/return_data gc_spl_interfaces/msg/RCGCRD4 "{player_num: 2, team_num: 18}"
+   ros2 topic pub --once /gc/return_data game_controller_spl_interfaces/msg/RCGCRD4 "{player_num: 2, team_num: 18}"
 
 You can see that the GameController is reporting a green light for team rUNSWift's player 2, indicating a message has been received recently.
 
