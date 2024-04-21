@@ -1,12 +1,12 @@
 Tutorial
 ########
 
-First, you should run the gc_spl node that handles communication with the SPL GameController.
+First, you should run the game_controller_spl node that handles communication with the SPL GameController.
 You must provide the versions of the GameController data and return data that you want to use as parameters.
 
 .. code-block:: sh
 
-   ros2 run gc_spl gc_spl --ros-args -p rcgcd_version:=16 -p rcgcrd_version:=4
+   ros2 run game_controller_spl game_controller_spl --ros-args -p rcgcd_version:=16 -p rcgcrd_version:=4
 
 .. note::
 
@@ -22,15 +22,15 @@ You should see the following amongst the listed topics:
 
 .. code-block:: sh
 
-   /gc/data [gc_spl_interfaces/msg/RCGCD15]
-   /gc/return_data [gc_spl_interfaces/msg/RCGCRD4]
+   /gc/data [game_controller_spl_interfaces/msg/RCGCD15]
+   /gc/return_data [game_controller_spl_interfaces/msg/RCGCRD4]
 
 Echoing data from GameController
 ================================
 
 To access GameController data from within your own node, simply subscribe to the ``/gc/data`` topic.
 
-The gc_spl node receives UDP packets from the GameController, converts them to ROS msgs and publishes them as ROS topics.
+The game_controller_spl node receives UDP packets from the GameController, converts them to ROS msgs and publishes them as ROS topics.
 ``/gc/data`` is the topic that it publishes to.
 
 Bring up a GameController instance, following instructions in the `GameController`_ README:
@@ -92,7 +92,7 @@ Sending data to GameController
 
 To send data from within your own node, simply publish to the ``/gc/return_data`` topic.
 
-The gc_spl node listens on the ``/gc/return_data`` topic, converts them to UDP packets and sends them to the GameController.
+The game_controller_spl node listens on the ``/gc/return_data`` topic, converts them to UDP packets and sends them to the GameController.
 
 Bring up a GameController instance with one team set to team 18 (rUNSWift), following instructions in the `GameController`_ README:
 
