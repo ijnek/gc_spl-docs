@@ -22,7 +22,7 @@ You should see the following amongst the listed topics:
 
 .. code-block:: sh
 
-   /gc/data [game_controller_spl_interfaces/msg/RCGCD15]
+   /gc/data [game_controller_spl_interfaces/msg/RCGCD16]
    /gc/return_data [game_controller_spl_interfaces/msg/RCGCRD4]
 
 Echoing data from GameController
