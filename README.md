@@ -1,4 +1,4 @@
-# GameController SPL Docs
+# Game Controller SPL Docs
 
 Repository for maintaining the Sphinx Documentation for the ROS2 GameController SPL package.
 
