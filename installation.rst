@@ -16,7 +16,7 @@ Source your ROS installation, then run:
 .. code-block:: console
 
   sudo apt update
-  sudo apt install ros-${ROS_DISTRO}-gc-spl
+  sudo apt install ros-${ROS_DISTRO}-game-controller-spl
 
 If this method does not work for your platform, perform the `Source Installation`_ instead.
 
@@ -30,7 +30,7 @@ Source your ROS2 installation, then in your ROS2 workspace, run:
 
 .. code-block:: sh
 
-   git clone https://github.com/ros-sports/gc_spl.git src/gc_spl --branch ${ROS_DISTRO}
+   git clone https://github.com/ros-sports/game_controller_spl.git src/game_controller_spl --branch ${ROS_DISTRO}
 
 Building
 ========
