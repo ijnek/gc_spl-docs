@@ -16,4 +16,4 @@ The project is hosted on `Github`_ by ROS Sports. **Issues and Pull Requests are
    installation
    tutorial
 
-.. _Github: https://github.com/ros-sports/gc_spl
+.. _Github: https://github.com/ros-sports/game_controller_spl
